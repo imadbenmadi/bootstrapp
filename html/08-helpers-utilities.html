@@ -1,0 +1,1152 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap 5 Helpers & Utilities Complete Guide</title>
+        <!-- Bootstrap 5 CDN -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../css/08-helpers-utilities.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#top"
+                    ><i class="bi bi-tools"></i> Bootstrap Helpers &
+                    Utilities</a
+                >
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                >Helpers</a
+                            >
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#clearfix"
+                                        >Clearfix</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="#colored-links"
+                                        >Colored Links</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#focus-ring"
+                                        >Focus Ring</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#icon-link"
+                                        >Icon Link</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#stacks"
+                                        >Stacks</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="#stretched-link"
+                                        >Stretched Link</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="#text-truncation"
+                                        >Text Truncation</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="#vertical-rule"
+                                        >Vertical Rule</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="#visually-hidden"
+                                        >Visually Hidden</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                >Utilities</a
+                            >
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#background"
+                                        >Background</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#borders"
+                                        >Borders</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#display"
+                                        >Display</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#flex"
+                                        >Flex</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#opacity"
+                                        >Opacity</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#position"
+                                        >Position</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#shadows"
+                                        >Shadows</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#sizing"
+                                        >Sizing</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#spacing"
+                                        >Spacing</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#text"
+                                        >Text</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#visibility"
+                                        >Visibility</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="container">
+                <h1 class="display-3 fw-bold mb-4">
+                    Bootstrap Helpers & Utilities
+                </h1>
+                <p class="lead">
+                    Complete reference guide for all Bootstrap 5.3 helpers and
+                    utilities
+                </p>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <!-- ======================== HELPERS ======================== -->
+            <div class="section-group">
+                <h2 class="group-title">HELPERS</h2>
+
+                <!-- Clearfix -->
+                <section id="clearfix" class="mb-5">
+                    <h3 class="section-title">1. Clearfix</h3>
+                    <p class="section-intro">
+                        Clear floated content within a parent element.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Usage:</strong>
+                                <code>.clearfix</code>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Purpose:</strong>
+                                Prevents floated elements from breaking layout
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="clearfix"&gt;
+    &lt;img src="image.jpg" class="float-start"&gt;
+    Text wraps around image, then clears
+&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Colored Links -->
+                <section id="colored-links" class="mb-5">
+                    <h3 class="section-title">2. Colored Links</h3>
+                    <p class="section-intro">
+                        Apply semantic color classes to links.
+                    </p>
+                    <div class="live-demo">
+                        <a href="#" class="link-primary">Primary link</a><br />
+                        <a href="#" class="link-secondary">Secondary link</a
+                        ><br />
+                        <a href="#" class="link-success">Success link</a><br />
+                        <a href="#" class="link-danger">Danger link</a><br />
+                        <a href="#" class="link-warning">Warning link</a><br />
+                        <a href="#" class="link-info">Info link</a><br />
+                        <a href="#" class="link-light">Light link</a><br />
+                        <a href="#" class="link-dark">Dark link</a>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;a href="#" class="link-primary"&gt;Primary link&lt;/a&gt;
+&lt;a href="#" class="link-danger"&gt;Danger link&lt;/a&gt;
+&lt;a href="#" class="link-success"&gt;Success link&lt;/a&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Focus Ring -->
+                <section id="focus-ring" class="mb-5">
+                    <h3 class="section-title">3. Focus Ring</h3>
+                    <p class="section-intro">
+                        Custom focus indicator for better keyboard navigation.
+                    </p>
+                    <div class="live-demo">
+                        <button class="btn btn-primary focus-ring me-2">
+                            Default focus ring
+                        </button>
+                        <button
+                            class="btn btn-primary focus-ring"
+                            style="--bs-focus-ring-width: 0.5rem"
+                        >
+                            Wider focus ring
+                        </button>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;button class="btn focus-ring"&gt;Focus Ring Button&lt;/button&gt;
+
+&lt;!-- Custom width --&gt;
+&lt;button class="btn focus-ring" style="--bs-focus-ring-width: 0.5rem;"&gt;
+    Wider Ring
+&lt;/button&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Icon Link -->
+                <section id="icon-link" class="mb-5">
+                    <h3 class="section-title">4. Icon Link</h3>
+                    <p class="section-intro">
+                        Combine icons with links seamlessly.
+                    </p>
+                    <div class="live-demo">
+                        <a href="#" class="icon-link">
+                            <i class="bi bi-arrow-right"></i> Learn more </a
+                        ><br /><br />
+                        <a href="#" class="icon-link icon-link-hover">
+                            <i class="bi bi-star"></i> Hover effect
+                        </a>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;a href="#" class="icon-link"&gt;
+    &lt;i class="bi bi-arrow-right"&gt;&lt;/i&gt; Learn more
+&lt;/a&gt;
+
+&lt;a href="#" class="icon-link icon-link-hover"&gt;
+    &lt;i class="bi bi-star"&gt;&lt;/i&gt; Hover effect
+&lt;/a&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Stacks -->
+                <section id="stacks" class="mb-5">
+                    <h3 class="section-title">5. Stacks (VStack, HStack)</h3>
+                    <p class="section-intro">
+                        Quickly build layouts with stacking helpers.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong>VStack (Vertical):</strong>
+                            <div class="live-demo">
+                                <div class="vstack gap-3">
+                                    <button class="btn btn-primary">
+                                        Button 1
+                                    </button>
+                                    <button class="btn btn-secondary">
+                                        Button 2
+                                    </button>
+                                    <button class="btn btn-success">
+                                        Button 3
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <strong>HStack (Horizontal):</strong>
+                            <div class="live-demo">
+                                <div class="hstack gap-3">
+                                    <button class="btn btn-primary">
+                                        Button 1
+                                    </button>
+                                    <button class="btn btn-secondary">
+                                        Button 2
+                                    </button>
+                                    <button class="btn btn-success">
+                                        Button 3
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;!-- Vertical Stack --&gt;
+&lt;div class="vstack gap-2"&gt;
+    &lt;button class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+    &lt;button class="btn btn-outline-secondary"&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Horizontal Stack --&gt;
+&lt;div class="hstack gap-3"&gt;
+    &lt;div class="bg-light border"&gt;Flexible item&lt;/div&gt;
+    &lt;div class="ms-auto"&gt;Margin auto item&lt;/div&gt;
+&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Stretched Link -->
+                <section id="stretched-link" class="mb-5">
+                    <h3 class="section-title">6. Stretched Link</h3>
+                    <p class="section-intro">
+                        Make an entire element clickable.
+                    </p>
+                    <div class="live-demo">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Clickable Card</h5>
+                                <p class="card-text">
+                                    Click anywhere on this card to follow the
+                                    link.
+                                </p>
+                                <a href="#" class="stretched-link"
+                                    >Go to link</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="card"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some text...&lt;/p&gt;
+        &lt;a href="#" class="stretched-link"&gt;Link&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Text Truncation -->
+                <section id="text-truncation" class="mb-5">
+                    <h3 class="section-title">7. Text Truncation</h3>
+                    <p class="section-intro">
+                        Truncate and clamp text with ellipsis.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="live-demo">
+                                <strong>Single line (text-truncate):</strong>
+                                <div class="text-truncate" style="width: 250px">
+                                    This is a very long text that will be
+                                    truncated with an ellipsis because it
+                                    exceeds the container width.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="live-demo">
+                                <strong>Multi-line (line-clamp):</strong>
+                                <div style="--bs-line-clamp: 2; width: 250px">
+                                    <p class="text-clamp">
+                                        This is a longer text that will be
+                                        clamped to exactly 2 lines. Any text
+                                        beyond the second line will be hidden
+                                        with an ellipsis. This is useful for
+                                        descriptions and summaries.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;!-- Single line truncation --&gt;
+&lt;div class="text-truncate"&gt;Long text here...&lt;/div&gt;
+
+&lt;!-- Multi-line clamp (2 lines) --&gt;
+&lt;p style="--bs-line-clamp: 2;"&gt;
+    Long paragraph text that will be clamped to 2 lines...
+&lt;/p&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Vertical Rule -->
+                <section id="vertical-rule" class="mb-5">
+                    <h3 class="section-title">8. Vertical Rule</h3>
+                    <p class="section-intro">
+                        Create vertical dividers between content.
+                    </p>
+                    <div class="live-demo">
+                        <div class="vr"></div>
+                        <div class="d-flex gap-3">
+                            <div>Item 1</div>
+                            <div class="vr"></div>
+                            <div>Item 2</div>
+                            <div class="vr"></div>
+                            <div>Item 3</div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="d-flex gap-3"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div class="vr"&gt;&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+    &lt;div class="vr"&gt;&lt;/div&gt;
+    &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Visually Hidden -->
+                <section id="visually-hidden" class="mb-5">
+                    <h3 class="section-title">9. Visually Hidden</h3>
+                    <p class="section-intro">
+                        Hide elements visually but keep them available to screen
+                        readers.
+                    </p>
+                    <div class="live-demo">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-search"></i>
+                            <span class="visually-hidden">Search</span>
+                        </button>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;button class="btn"&gt;
+    &lt;i class="bi bi-search"&gt;&lt;/i&gt;
+    &lt;span class="visually-hidden"&gt;Search&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Useful for icon-only buttons and screen readers --&gt;</pre
+                        >
+                    </div>
+                </section>
+            </div>
+
+            <hr class="my-5" />
+
+            <!-- ======================== UTILITIES ======================== -->
+            <div class="section-group">
+                <h2 class="group-title">UTILITIES</h2>
+
+                <!-- Background -->
+                <section id="background" class="mb-5">
+                    <h3 class="section-title">1. Background</h3>
+                    <p class="section-intro">
+                        Set background colors and gradients.
+                    </p>
+                    <div class="live-demo">
+                        <div class="row g-2">
+                            <div class="col-md-4">
+                                <div class="p-3 bg-primary text-white">
+                                    bg-primary
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-success text-white">
+                                    bg-success
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-danger text-white">
+                                    bg-danger
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-warning">bg-warning</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-info">bg-info</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-light border">bg-light</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="bg-primary"&gt;Primary background&lt;/div&gt;
+&lt;div class="bg-success text-white"&gt;Success background&lt;/div&gt;
+&lt;div class="bg-gradient"&gt;With gradient&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Borders -->
+                <section id="borders" class="mb-5">
+                    <h3 class="section-title">2. Borders</h3>
+                    <p class="section-intro">
+                        Control borders on all sides or specific sides.
+                    </p>
+                    <div class="live-demo">
+                        <div class="row g-2 mb-3">
+                            <div class="col-md-4">
+                                <div class="p-3 border">border</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border-top">border-top</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div
+                                    class="p-3 border-end border-5 border-primary"
+                                >
+                                    border-end border-5
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 rounded">rounded</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded-3">
+                                    rounded-3
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded-pill">
+                                    rounded-pill
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="border"&gt;Border all sides&lt;/div&gt;
+&lt;div class="border-top border-primary"&gt;Top border&lt;/div&gt;
+&lt;div class="border-start border-3"&gt;Left thick border&lt;/div&gt;
+&lt;div class="rounded"&gt;Rounded corners&lt;/div&gt;
+&lt;div class="rounded-pill"&gt;Pill shape&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Display -->
+                <section id="display" class="mb-5">
+                    <h3 class="section-title">3. Display</h3>
+                    <p class="section-intro">
+                        Control how elements are displayed.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Display Values:</strong>
+                                <ul>
+                                    <li><code>d-none</code> - display: none</li>
+                                    <li><code>d-inline</code> - inline</li>
+                                    <li>
+                                        <code>d-inline-block</code> -
+                                        inline-block
+                                    </li>
+                                    <li><code>d-block</code> - block</li>
+                                    <li><code>d-flex</code> - flexbox</li>
+                                    <li><code>d-grid</code> - grid</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Responsive:</strong>
+                                <ul>
+                                    <li>
+                                        <code>d-md-none</code> - hidden on md+
+                                    </li>
+                                    <li>
+                                        <code>d-lg-block</code> - block on lg+
+                                    </li>
+                                    <li>
+                                        <code>d-print-none</code> - hidden when
+                                        printing
+                                    </li>
+                                    <li>
+                                        <code>d-print-block</code> - show on
+                                        print
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="d-none"&gt;Hidden&lt;/div&gt;
+&lt;div class="d-none d-md-block"&gt;Show on medium+&lt;/div&gt;
+&lt;div class="d-md-none"&gt;Hide on medium+&lt;/div&gt;
+&lt;div class="d-print-none"&gt;Hide when printing&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Flex -->
+                <section id="flex" class="mb-5">
+                    <h3 class="section-title">4. Flex</h3>
+                    <p class="section-intro">
+                        Build flexible layouts with flexbox utilities.
+                    </p>
+                    <div class="live-demo">
+                        <strong class="d-block mb-2"
+                            >Centered (justify-content-center +
+                            align-items-center):</strong
+                        >
+                        <div
+                            class="d-flex justify-content-center align-items-center bg-light p-4"
+                            style="height: 150px"
+                        >
+                            <h5 class="mb-0">Centered Content</h5>
+                        </div>
+                        <hr />
+                        <strong class="d-block mb-2">Space Between:</strong>
+                        <div
+                            class="d-flex justify-content-between p-3 bg-light"
+                        >
+                            <span>Item 1</span>
+                            <span>Item 2</span>
+                            <span>Item 3</span>
+                        </div>
+                        <hr />
+                        <strong class="d-block mb-2"
+                            >Vertical (flex-column):</strong
+                        >
+                        <div class="d-flex flex-column gap-2">
+                            <div class="bg-primary text-white p-2">Item 1</div>
+                            <div class="bg-success text-white p-2">Item 2</div>
+                            <div class="bg-info text-white p-2">Item 3</div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;!-- Centered --&gt;
+&lt;div class="d-flex justify-content-center align-items-center"&gt;
+    Content centered
+&lt;/div&gt;
+
+&lt;!-- Vertical layout --&gt;
+&lt;div class="d-flex flex-column gap-2"&gt;
+    &lt;button&gt;Button 1&lt;/button&gt;
+    &lt;button&gt;Button 2&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Space between --&gt;
+&lt;div class="d-flex justify-content-between"&gt;
+    &lt;div&gt;Left&lt;/div&gt;
+    &lt;div&gt;Right&lt;/div&gt;
+&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Opacity -->
+                <section id="opacity" class="mb-5">
+                    <h3 class="section-title">5. Opacity</h3>
+                    <p class="section-intro">
+                        Control element opacity (transparency).
+                    </p>
+                    <div class="live-demo">
+                        <div class="row g-2">
+                            <div class="col-md-3">
+                                <div
+                                    class="p-3 bg-primary opacity-25 text-white"
+                                >
+                                    opacity-25
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div
+                                    class="p-3 bg-primary opacity-50 text-white"
+                                >
+                                    opacity-50
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div
+                                    class="p-3 bg-primary opacity-75 text-white"
+                                >
+                                    opacity-75
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div
+                                    class="p-3 bg-primary opacity-100 text-white"
+                                >
+                                    opacity-100
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="opacity-25"&gt;25% opacity&lt;/div&gt;
+&lt;div class="opacity-50"&gt;50% opacity&lt;/div&gt;
+&lt;div class="opacity-75"&gt;75% opacity&lt;/div&gt;
+&lt;div class="opacity-100"&gt;100% opacity&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Position -->
+                <section id="position" class="mb-5">
+                    <h3 class="section-title">6. Position</h3>
+                    <p class="section-intro">Control element positioning.</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Position Values:</strong>
+                                <ul>
+                                    <li>
+                                        <code>position-static</code> - static
+                                        (default)
+                                    </li>
+                                    <li>
+                                        <code>position-relative</code> -
+                                        relative
+                                    </li>
+                                    <li>
+                                        <code>position-absolute</code> -
+                                        absolute
+                                    </li>
+                                    <li><code>position-fixed</code> - fixed</li>
+                                    <li>
+                                        <code>position-sticky</code> - sticky
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Placement:</strong>
+                                <ul>
+                                    <li><code>top-0, top-50, top-100</code></li>
+                                    <li>
+                                        <code
+                                            >start-0, start-50, start-100</code
+                                        >
+                                    </li>
+                                    <li>
+                                        <code
+                                            >bottom-0, bottom-50,
+                                            bottom-100</code
+                                        >
+                                    </li>
+                                    <li><code>end-0, end-50, end-100</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div style="position: relative; height: 200px;"&gt;
+    &lt;div class="position-absolute top-0 start-0"&gt;Top Left&lt;/div&gt;
+    &lt;div class="position-absolute bottom-0 end-0"&gt;Bottom Right&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="position-fixed bottom-0 end-0"&gt;Fixed footer&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Shadows -->
+                <section id="shadows" class="mb-5">
+                    <h3 class="section-title">7. Shadows</h3>
+                    <p class="section-intro">Add depth with box shadows.</p>
+                    <div class="live-demo">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="p-3 shadow-sm">shadow-sm</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 shadow">shadow</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 shadow-lg">shadow-lg</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="shadow-sm"&gt;Small shadow&lt;/div&gt;
+&lt;div class="shadow"&gt;Regular shadow&lt;/div&gt;
+&lt;div class="shadow-lg"&gt;Large shadow&lt;/div&gt;
+&lt;div class="shadow-none"&gt;No shadow&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Sizing -->
+                <section id="sizing" class="mb-5">
+                    <h3 class="section-title">8. Sizing</h3>
+                    <p class="section-intro">Set element width and height.</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Width:</strong>
+                                <ul>
+                                    <li>
+                                        <code>w-25, w-50, w-75, w-100</code> -
+                                        percentage
+                                    </li>
+                                    <li><code>w-auto</code> - auto</li>
+                                    <li>
+                                        <code>mw-100</code> - max-width 100%
+                                    </li>
+                                    <li>
+                                        <code>vw-100</code> - viewport width
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Height:</strong>
+                                <ul>
+                                    <li>
+                                        <code>h-25, h-50, h-75, h-100</code> -
+                                        percentage
+                                    </li>
+                                    <li><code>h-auto</code> - auto</li>
+                                    <li>
+                                        <code>mh-100</code> - max-height 100%
+                                    </li>
+                                    <li>
+                                        <code>vh-100</code> - viewport height
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="w-100 h-auto"&gt;Full width, auto height&lt;/div&gt;
+&lt;div class="w-50"&gt;50% width&lt;/div&gt;
+&lt;div class="mw-100"&gt;Max width 100%&lt;/div&gt;
+&lt;img src="image.jpg" class="w-100 h-auto"&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Spacing -->
+                <section id="spacing" class="mb-5">
+                    <h3 class="section-title">9. Spacing (Margin & Padding)</h3>
+                    <p class="section-intro">
+                        Control margins and padding with consistent spacing
+                        scale.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Format: {property}{side}-{size}</strong>
+                                <ul>
+                                    <li>
+                                        <code>m</code> = margin,
+                                        <code>p</code> = padding
+                                    </li>
+                                    <li>
+                                        <code>t</code> = top, <code>b</code> =
+                                        bottom, <code>s/start</code> = left,
+                                        <code>e/end</code> = right
+                                    </li>
+                                    <li>
+                                        <code>x</code> = horizontal,
+                                        <code>y</code> = vertical
+                                    </li>
+                                    <li>
+                                        <code>0-5</code> = size scale (0=0,
+                                        1=0.25rem, 5=3rem)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Examples:</strong>
+                                <ul>
+                                    <li>
+                                        <code>m-3</code> = margin 1rem all sides
+                                    </li>
+                                    <li><code>mt-5</code> = margin-top 3rem</li>
+                                    <li>
+                                        <code>px-2</code> = padding left/right
+                                        0.5rem
+                                    </li>
+                                    <li>
+                                        <code>ms-auto</code> = margin-left auto
+                                        (right align)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="m-3 p-4"&gt;Margin 1rem, Padding 1.5rem&lt;/div&gt;
+&lt;div class="mt-5 mb-2"&gt;Top margin 3rem, bottom 0.5rem&lt;/div&gt;
+&lt;div class="mx-auto"&gt;Centered with left/right auto margin&lt;/div&gt;
+&lt;div class="ms-auto"&gt;Right aligned&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Text -->
+                <section id="text" class="mb-5">
+                    <h3 class="section-title">10. Text</h3>
+                    <p class="section-intro">
+                        Control text alignment, weight, style, and more.
+                    </p>
+                    <div class="live-demo">
+                        <p class="text-start">Text aligned start (left)</p>
+                        <p class="text-center">Text aligned center</p>
+                        <p class="text-end">Text aligned end (right)</p>
+                        <hr />
+                        <p class="fw-light">Light weight</p>
+                        <p class="fw-normal">Normal weight</p>
+                        <p class="fw-bold">Bold weight</p>
+                        <p class="fst-italic">Italic style</p>
+                        <p class="text-uppercase">uppercase text</p>
+                        <p class="text-lowercase">LOWERCASE TEXT</p>
+                        <p class="text-capitalize">capitalize text</p>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;p class="text-center"&gt;Centered text&lt;/p&gt;
+&lt;p class="fw-bold"&gt;Bold text&lt;/p&gt;
+&lt;p class="text-primary"&gt;Primary colored text&lt;/p&gt;
+&lt;p class="text-muted"&gt;Muted text&lt;/p&gt;
+&lt;p class="text-uppercase"&gt;uppercase&lt;/p&gt;</pre
+                        >
+                    </div>
+                </section>
+
+                <!-- Visibility -->
+                <section id="visibility" class="mb-5">
+                    <h3 class="section-title">11. Visibility</h3>
+                    <p class="section-intro">
+                        Control element visibility while maintaining document
+                        flow.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Visibility Classes:</strong>
+                                <ul>
+                                    <li>
+                                        <code>visible</code> - visibility:
+                                        visible
+                                    </li>
+                                    <li>
+                                        <code>invisible</code> - visibility:
+                                        hidden (keeps space)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="util-box">
+                                <strong>Display vs Visibility:</strong>
+                                <ul>
+                                    <li>
+                                        <code>d-none</code> - removes from flow
+                                    </li>
+                                    <li>
+                                        <code>invisible</code> - hidden but
+                                        keeps space
+                                    </li>
+                                    <li>
+                                        <code>visually-hidden</code> - screen
+                                        reader only
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <pre>
+&lt;div class="invisible"&gt;Hidden but takes space&lt;/div&gt;
+&lt;div class="d-none"&gt;Hidden and no space&lt;/div&gt;
+&lt;div class="visually-hidden"&gt;Screen readers only&lt;/div&gt;</pre
+                        >
+                    </div>
+                </section>
+            </div>
+
+            <!-- Quick Reference Table -->
+            <section class="mb-5">
+                <h2 class="group-title">Quick Reference Table</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Category</th>
+                                <th>Common Classes</th>
+                                <th>Use Case</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Display</strong></td>
+                                <td><code>d-flex, d-none, d-block</code></td>
+                                <td>Show/hide elements, flexbox layouts</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Spacing</strong></td>
+                                <td><code>m-3, p-4, mx-auto</code></td>
+                                <td>Margins, padding, centering</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Flexbox</strong></td>
+                                <td>
+                                    <code>justify-content-center, gap-2</code>
+                                </td>
+                                <td>Layout alignment and spacing</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sizing</strong></td>
+                                <td><code>w-100, h-auto, mw-100</code></td>
+                                <td>Element dimensions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Colors</strong></td>
+                                <td><code>bg-primary, text-danger</code></td>
+                                <td>Background and text colors</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Borders</strong></td>
+                                <td>
+                                    <code>border, rounded, border-primary</code>
+                                </td>
+                                <td>Borders and corners</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Shadows</strong></td>
+                                <td><code>shadow, shadow-lg</code></td>
+                                <td>Add depth to elements</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Text</strong></td>
+                                <td>
+                                    <code
+                                        >text-center, fw-bold,
+                                        text-uppercase</code
+                                    >
+                                </td>
+                                <td>Text styling and alignment</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Best Practices -->
+            <section class="mb-5">
+                <h2 class="group-title">Best Practices</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="practice-card bg-success-subtle">
+                            <h5 class="text-success">
+                                <i class="bi bi-check-circle"></i> DO
+                            </h5>
+                            <ul>
+                                <li>Use utilities for quick styling</li>
+                                <li>Combine related utilities logically</li>
+                                <li>Use responsive variants for layouts</li>
+                                <li>Stack utilities for complex effects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="practice-card bg-danger-subtle">
+                            <h5 class="text-danger">
+                                <i class="bi bi-x-circle"></i> DON'T
+                            </h5>
+                            <ul>
+                                <li>Avoid utility bloat on single elements</li>
+                                <li>
+                                    Don't mix container and component utilities
+                                </li>
+                                <li>Avoid replacing semantic HTML</li>
+                                <li>Don't ignore responsive breakpoints</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-5 mt-5">
+            <div class="container text-center">
+                <p class="mb-0">
+                    &copy; 2026 Bootstrap Helpers & Utilities Guide | Bootstrap
+                    5.3.0
+                </p>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

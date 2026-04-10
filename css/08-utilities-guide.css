@@ -1,0 +1,316 @@
+/* Bootstrap Utilities Guide - Custom Styling */
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .lead {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+/* Section Titles */
+.section-title {
+    color: #667eea;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+    display: inline-block;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Utility Table Styling */
+.util-table {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.util-table strong {
+    display: block;
+    color: #667eea;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.util-table strong:first-child {
+    margin-top: 0;
+}
+
+.util-table ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.util-table li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+
+.util-table code {
+    background: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #e83e8c;
+    font-weight: 600;
+}
+
+/* Example Box */
+.example-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.example-box h5 {
+    color: #856404;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.example-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.example-box li {
+    padding: 8px 0;
+}
+
+.example-box .badge {
+    margin-right: 10px;
+    font-size: 0.85rem;
+}
+
+/* Live Demo Section */
+.live-demo {
+    background: #e7f3ff;
+    border-left: 4px solid #0066cc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.live-demo h5 {
+    color: #004399;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Demo Elements */
+.demo-box {
+    background: white;
+    border: 2px dashed #ccc;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.demo-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Code Block */
+.code-block {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.code-block strong {
+    color: #66d9ef;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.code-block pre {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Practice Cards */
+.practice-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.practice-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #667eea;
+}
+
+.practice-card h5 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.practice-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.practice-card li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.practice-card li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Tables */
+table {
+    margin-top: 20px;
+}
+
+.table-responsive {
+    margin: 20px 0;
+}
+
+.table thead.table-dark th {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f0f0ff;
+}
+
+.table code {
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #e83e8c;
+}
+
+/* Alert Styling */
+.alert {
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+.alert-info code {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Badge Styling */
+.badge {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Navbar */
+.navbar-brand i {
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .util-table {
+        margin-bottom: 15px;
+    }
+
+    .demo-box {
+        margin-bottom: 15px;
+    }
+
+    .practice-card {
+        margin-bottom: 15px;
+    }
+
+    .code-block {
+        font-size: 0.8rem;
+    }
+
+    .code-block pre {
+        font-size: 0.8rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hero-section {
+        display: none;
+    }
+
+    .code-block {
+        background: white;
+        color: black;
+        border: 1px solid #ccc;
+    }
+}
