@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SASS/SCSS Complete Guide</title>
+        <!-- Bootstrap 5 CDN -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../css/05-SASS-guide.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#top">SASS/SCSS Guide</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#what">What is SASS?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#syntax">Syntax</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bootstrap">Bootstrap</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container py-5">
+            <!-- What is SASS -->
+            <section id="what" class="mb-5">
+                <h2>What is SASS?</h2>
+                <p>
+                    SASS (Syntactically Awesome Style Sheets) is a CSS
+                    preprocessor that extends CSS with powerful features like
+                    variables, mixins, nesting, and functions. It compiles to
+                    regular CSS that browsers can understand.
+                </p>
+
+                <div class="info-box">
+                    <strong>❓ Why use SASS?</strong>
+                    <ul>
+                        <li>✅ Write cleaner, more maintainable code</li>
+                        <li>✅ Reuse styles with variables and mixins</li>
+                        <li>✅ Keep styles organized with nesting</li>
+                        <li>✅ Easier to collaborate and scale projects</li>
+                    </ul>
+                </div>
+
+                <h3>SCSS vs SASS</h3>
+                <p>SASS has two syntaxes:</p>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h5>SCSS Syntax (Recommended)</h5>
+                        <div class="code-block">
+                            <pre>
+$primary-color: #0066cc;
+
+.navbar {
+  background-color: $primary-color;
+  
+  .nav-link {
+    color: white;
+    &:hover {
+      color: lighten($primary-color, 20%);
+    }
+  }
+}</pre
+                            >
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>SASS Syntax (Indent-based)</h5>
+                        <div class="code-block">
+                            <pre>
+$primary-color: #0066cc
+
+.navbar
+  background-color: $primary-color
+  
+  .nav-link
+    color: white
+    &:hover
+      color: lighten($primary-color, 20%)</pre
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                    <strong>Recommendation:</strong> Use SCSS syntax - it's more
+                    similar to CSS and easier to learn.
+                </p>
+            </section>
+
+            <!-- Core SASS Features -->
+            <section id="syntax" class="mb-5">
+                <h2>SASS Features</h2>
+
+                <!-- Variables -->
+                <div class="mb-4">
+                    <h3>1. Variables</h3>
+                    <p>Store values to reuse throughout your stylesheet.</p>
+                    <div class="code-block">
+                        <pre>
+// Define variables
+$primary-color: #0066cc;
+$secondary-color: #FF6B6B;
+$base-font-size: 16px;
+$spacing-unit: 1rem;
+
+// Use variables
+body {
+  font-size: $base-font-size;
+  color: $primary-color;
+}
+
+.button {
+  background-color: $secondary-color;
+  padding: $spacing-unit;
+}</pre
+                        >
+                    </div>
+                    <div class="success-box">
+                        <strong>✓ Benefits:</strong> Change colors or sizes in
+                        one place instead of searching the entire file!
+                    </div>
+                </div>
+
+                <!-- Nesting -->
+                <div class="mb-4">
+                    <h3>2. Nesting</h3>
+                    <p>
+                        Structure selectors to reduce repetition and improve
+                        readability.
+                    </p>
+                    <div class="code-block">
+                        <pre>
+// SCSS
+.card {
+  background-color: white;
+  border-radius: 8px;
+  
+  .card-header {
+    background-color: $primary-color;
+    color: white;
+  }
+  
+  .card-body {
+    padding: $spacing-unit;
+  }
+  
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+}
+
+// Compiles to:
+// .card { ... }
+// .card .card-header { ... }
+// .card .card-body { ... }
+// .card:hover { ... }</pre
+                        >
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠️ Warning:</strong> Don't nest too deeply (max
+                        3-4 levels). Overly nested CSS becomes hard to maintain.
+                    </div>
+                </div>
+
+                <!-- Mixins -->
+                <div class="mb-4">
+                    <h3>3. Mixins</h3>
+                    <p>
+                        Reusable blocks of styles that you can include in other
+                        styles.
+                    </p>
+                    <div class="code-block">
+                        <pre>
+// Define a mixin
+@mixin rounded-borders {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Mixin with parameters
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Use mixins with @include
+.card {
+  @include rounded-borders;
+  
+  .card-content {
+    @include flex-center;
+    min-height: 200px;
+  }
+}
+
+.btn-primary {
+  @include button-style(#0066cc, white);
+}
+
+.btn-secondary {
+  @include button-style(#FF6B6B, white);
+}</pre
+                        >
+                    </div>
+                </div>
+
+                <!-- Functions -->
+                <div class="mb-4">
+                    <h3>4. Functions</h3>
+                    <p>Built-in and custom functions to manipulate values.</p>
+                    <div class="code-block">
+                        <pre>
+// Built-in color functions
+$base-color: #0066cc;
+
+.lighten-example {
+  background-color: lighten($base-color, 20%);  // 20% lighter
+}
+
+.darken-example {
+  background-color: darken($base-color, 20%);   // 20% darker
+}
+
+.saturate-example {
+  background-color: saturate($base-color, 20%);  // More vibrant
+}
+
+// Custom function
+@function calculate-spacing($multiplier) {
+  @return 1rem * $multiplier;
+}
+
+.spacing-double {
+  padding: calculate-spacing(2);  // 2rem
+}</pre
+                        >
+                    </div>
+                </div>
+
+                <!-- Imports -->
+                <div class="mb-4">
+                    <h3>5. Imports (@import)</h3>
+                    <p>
+                        Split your styles into multiple files and import them.
+                    </p>
+                    <div class="code-block">
+                        <pre>
+// _variables.scss
+$primary-color: #0066cc;
+$secondary-color: #FF6B6B;
+
+// _mixins.scss
+@mixin rounded-borders { ... }
+@mixin flex-center { ... }
+
+// styles.scss (main file)
+@import 'variables';
+@import 'mixins';
+@import 'navbar';
+@import 'cards';
+@import 'buttons';</pre
+                        >
+                    </div>
+                    <div class="info-box">
+                        <strong>💡 Tip:</strong> Files starting with
+                        <code>_</code> (underscore) are partials and won't
+                        compile to separate CSS files.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bootstrap Integration -->
+            <section id="bootstrap" class="mb-5">
+                <h2>Using SASS with Bootstrap</h2>
+
+                <h3>Override Bootstrap Variables</h3>
+                <p>Customize Bootstrap before importing it:</p>
+                <div class="code-block">
+                    <pre>
+// main.scss
+// First, define your custom variable values
+$primary: #0066cc;
+$secondary: #FF6B6B;
+$success: #28a745;
+$danger: #dc3545;
+$body-font-size: 16px;
+$border-radius: 8px;
+
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Now add your custom styles
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}</pre
+                    >
+                </div>
+
+                <h3>Popular Bootstrap Variables to Customize</h3>
+                <div class="table-responsive mb-4">
+                    <table class="table table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Variable</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>$primary</code></td>
+                                <td>Primary brand color</td>
+                                <td><code>#0066cc</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$secondary</code></td>
+                                <td>Secondary color</td>
+                                <td><code>#FF6B6B</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$body-font-family</code></td>
+                                <td>Default font</td>
+                                <td><code>'Segoe UI', sans-serif</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$border-radius</code></td>
+                                <td>Default border radius</td>
+                                <td><code>0.25rem</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$spacer</code></td>
+                                <td>Base spacing unit</td>
+                                <td><code>1rem</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Create Custom Bootstrap Components</h3>
+                <div class="code-block">
+                    <pre>
+// Create a custom button variant
+@mixin button-variant($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Apply to a custom class
+.btn-custom {
+  @include button-variant($primary, white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: $border-radius;
+}</pre
+                    >
+                </div>
+            </section>
+
+            <!-- Workflow -->
+            <section id="workflow" class="mb-5">
+                <h2>SASS Workflow</h2>
+
+                <h3>Step 1: Write SCSS</h3>
+                <p>
+                    Create <code>main.scss</code> with your variables, mixins,
+                    and styles.
+                </p>
+
+                <h3>Step 2: Compile to CSS</h3>
+                <p>
+                    Use a compiler to convert SCSS to CSS. Three main options:
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Command Line</h5>
+                                <div class="code-block">
+                                    <pre>
+npm install -g sass
+sass main.scss main.css</pre
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>VS Code Extension</h5>
+                                <div class="code-block">
+                                    <pre>
+Extension: Live Sass Compiler
+Click "Watch Sass" button</pre
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Online Tools</h5>
+                                <div class="code-block">
+                                    <pre>
+sass-lang.com/playground
+CodePen SCSS support</pre
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mt-4">Step 3: Link Compiled CSS</h3>
+                <div class="code-block">
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="main.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;button class="btn-custom"&gt;Click Me&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre
+                    >
+                </div>
+            </section>
+
+            <!-- Best Practices -->
+            <section>
+                <h2>Best Practices</h2>
+
+                <div class="info-box">
+                    <strong>✓ Use Variables for:</strong>
+                    <ul>
+                        <li>Colors, fonts, sizes</li>
+                        <li>Breakpoints for responsive design</li>
+                        <li>Spacing and padding values</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <strong>✓ Use Mixins for:</strong>
+                    <ul>
+                        <li>Frequently used style patterns</li>
+                        <li>Vendor prefixes (flex, transform)</li>
+                        <li>Media queries and responsive styles</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <strong>⚠️ Avoid:</strong>
+                    <ul>
+                        <li>
+                            Excessively nested selectors (aim for max 3 levels)
+                        </li>
+                        <li>
+                            Complex nesting that mirrors HTML structure too
+                            closely
+                        </li>
+                        <li>
+                            Creating too many variables - consolidate when
+                            possible
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="success-box">
+                    <strong>💡 Pro Tips:</strong>
+                    <ul>
+                        <li>
+                            Organize SCSS into separate files: variables,
+                            mixins, base styles, components
+                        </li>
+                        <li>
+                            Use consistent naming conventions (BEM:
+                            .block__element--modifier)
+                        </li>
+                        <li>Always compile and test in browser</li>
+                        <li>Keep generated CSS readable for debugging</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Bootstrap JS CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

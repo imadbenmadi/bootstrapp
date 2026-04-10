@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tech Solutions - Digital Agency</title>
+        <!-- Bootstrap 5 CDN -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../css/02-real-project-example.css" />
+        <style>
+            /* Navbar hide/show on scroll */
+            .navbar {
+                transition: top 0.3s ease-in-out !important;
+                top: 0;
+                position: fixed !important;
+                width: 100%;
+                z-index: 1000;
+            }
+
+            /* Hide navbar when scrolling down */
+            .nav-hidden {
+                top: -100px !important;
+            }
+
+           
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav
+            id="mainNavbar"
+            class="navbar navbar-expand-lg navbar-light bg-white shadow-sm"
+        >
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="bi bi-lightning-fill"></i> Tech Solutions
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>We Build Digital Solutions</h1>
+                <p>Creating beautiful, responsive websites and applications</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button
+                        type="button"
+                        class="btn btn-light btn-lg px-4 me-3"
+                    >
+                        Get Started
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-outline-light btn-lg px-4"
+                    >
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-light">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <div class="row g-4 row-cols-1 row-cols-md-3">
+                    <div class="">
+                        <div class="card service-card">
+                            <div class="card-body text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-code-square"></i>
+                                </div>
+                                <h5 class="card-title">Web Development</h5>
+                                <p class="card-text">
+                                    Custom websites built with modern
+                                    technologies and best practices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card service-card">
+                            <div class="card-body text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-palette"></i>
+                                </div>
+                                <h5 class="card-title">UI/UX Design</h5>
+                                <p class="card-text">
+                                    Beautiful and user-friendly interface
+                                    designs that engage users.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card service-card">
+                            <div class="card-body text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+                                <h5 class="card-title">Mobile Apps</h5>
+                                <p class="card-text">
+                                    Native and cross-platform mobile
+                                    applications for all devices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div class="container">
+                <h2 class="section-title">Our Portfolio</h2>
+                <div class="row g-4 row-cols-1 row-cols-md-3">
+                    <div class="">
+                        <div class="portfolio-item">
+                            <img
+                                src="https://via.placeholder.com/400x250?text=Project+1"
+                                alt="Project 1"
+                            />
+                            <div class="portfolio-overlay">
+                                <p>E-Commerce Platform</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="portfolio-item">
+                            <img
+                                src="https://via.placeholder.com/400x250?text=Project+2"
+                                alt="Project 2"
+                            />
+                            <div class="portfolio-overlay">
+                                <p>Social Media App</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="portfolio-item">
+                            <img
+                                src="https://via.placeholder.com/400x250?text=Project+3"
+                                alt="Project 3"
+                            />
+                            <div class="portfolio-overlay">
+                                <p>Analytics Dashboard</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="bg-light">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img
+                                src="https://via.placeholder.com/150?text=John"
+                                alt="John Doe"
+                            />
+                            <h5>John Doe</h5>
+                            <p class="text-muted">Lead Developer</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img
+                                src="https://via.placeholder.com/150?text=Jane"
+                                alt="Jane Smith"
+                            />
+                            <h5>Jane Smith</h5>
+                            <p class="text-muted">UI/UX Designer</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-dribbble"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img
+                                src="https://via.placeholder.com/150?text=Mike"
+                                alt="Mike Johnson"
+                            />
+                            <h5>Mike Johnson</h5>
+                            <p class="text-muted">Project Manager</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img
+                                src="https://via.placeholder.com/150?text=Sarah"
+                                alt="Sarah Lee"
+                            />
+                            <h5>Sarah Lee</h5>
+                            <p class="text-muted">QA Specialist</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">What Clients Say</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-box">
+                            <p>
+                                "Tech Solutions transformed our business with a
+                                beautiful new website. Highly professional!"
+                            </p>
+                            <div class="testimonial-author">
+                                - Alex Brown, CEO
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-box">
+                            <p>
+                                "The team was responsive and delivered exactly
+                                what we needed. Great experience!"
+                            </p>
+                            <div class="testimonial-author">
+                                - Maria Garcia, Founder
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-box">
+                            <p>
+                                "Outstanding work! They understood our vision
+                                and executed it perfectly."
+                            </p>
+                            <div class="testimonial-author">
+                                - David Wilson, Manager
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="bg-light">
+            <div class="container">
+                <h2 class="section-title">Our Pricing</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="pricing-card p-4">
+                            <h5 class="text-center">Starter</h5>
+                            <div class="price text-center">$499</div>
+                            <p class="text-center text-muted">/project</p>
+                            <ul class="list-unstyled">
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    5 Pages
+                                </li>
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    Responsive Design
+                                </li>
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    Basic SEO
+                                </li>
+                                <li class="py-2">
+                                    <i class="bi bi-x-circle text-danger"></i>
+                                    Email Support
+                                </li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100 mt-3">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pricing-card featured p-4">
+                            <div
+                                class="badge bg-warning text-dark mx-auto d-block w-fit mb-3"
+                            >
+                                POPULAR
+                            </div>
+                            <h5 class="text-center">Professional</h5>
+                            <div class="price text-center">$999</div>
+                            <p class="text-center text-muted">/project</p>
+                            <ul class="list-unstyled">
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    15 Pages
+                                </li>
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    Responsive Design
+                                </li>
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    Advanced SEO
+                                </li>
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    Email Support
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary w-100 mt-3">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pricing-card p-4">
+                            <h5 class="text-center">Enterprise</h5>
+                            <div class="price text-center">Custom</div>
+                            <p class="text-center text-muted">/project</p>
+                            <ul class="list-unstyled">
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    Unlimited Pages
+                                </li>
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    Custom Features
+                                </li>
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    Full SEO Strategy
+                                </li>
+                                <li class="py-2">
+                                    <i
+                                        class="bi bi-check-circle text-success"
+                                    ></i>
+                                    24/7 Support
+                                </li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100 mt-3">
+                                Contact Us
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Your Name"
+                                        required
+                                    />
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        placeholder="Your Email"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Subject"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <textarea
+                                    class="form-control"
+                                    rows="5"
+                                    placeholder="Your Message"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-lg"
+                                >
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <h5>Tech Solutions</h5>
+                        <p>Building digital solutions for modern businesses.</p>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h5>Contact Info</h5>
+                        <p>
+                            Email:
+                            <a href="mailto:info@tech.com">info@tech.com</a
+                            ><br />
+                            Phone:
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h5>Follow Us</h5>
+                        <div class="social-icons">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="bg-light" />
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2024 Tech Solutions. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="me-3">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Smooth scrolling -->
+        <script src="../js/smooth-scroll.js"></script>
+
+        <!-- Navbar scroll hide/show -->
+        <script>
+            let lastScrollTop = 0;
+            const navbar = document.querySelector(".navbar");
+
+            window.addEventListener("scroll", function () {
+                let scrollTop =
+                    window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down - Hide
+                    navbar.classList.add("nav-hidden");
+                } else {
+                    // Scrolling up - Show
+                    navbar.classList.remove("nav-hidden");
+                }
+
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            });
+        </script>
+    </body>
+</html>

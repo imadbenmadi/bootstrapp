@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap 5 Cheat Sheet</title>
+        <!-- Bootstrap 5 CDN -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../css/04-cheat-sheet.css" />
+    </head>
+    <body class="bg-light">
+        <header class="bg-dark text-white py-4 mb-4">
+            <div class="container">
+                <h1>📋 Bootstrap 5 Cheat Sheet</h1>
+                <p>
+                    Quick reference for common Bootstrap classes and components
+                </p>
+            </div>
+        </header>
+
+        <div class="container mb-5">
+            <!-- Grid System -->
+            <section class="mb-5">
+                <div class="cheat-section">Grid System</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Containers</h5>
+                        <div class="code-snippet">
+                            <code>.container</code> - Max width 1200px<br />
+                            <code>.container-fluid</code> - Full width<br />
+                            <code>.container-xl</code> - Max width 1320px
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Columns</h5>
+                        <div class="code-snippet">
+                            <code>.col</code> - Auto width<br />
+                            <code>.col-md-6</code> - 50% on medium<br />
+                            <code>.col-lg-4</code> - 33% on large
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Typography -->
+            <section class="mb-5">
+                <div class="cheat-section">Typography</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Headings</h5>
+                        <div class="code-snippet">
+                            <code>.h1</code> to <code>.h6</code> - Heading
+                            styles<br />
+                            <code>.display-1</code> - Extra large<br />
+                            <code>.display-6</code> - Small display
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Text Utilities</h5>
+                        <div class="code-snippet">
+                            <code>.fw-bold</code> - Font weight bold<br />
+                            <code>.fst-italic</code> - Italic text<br />
+                            <code>.text-muted</code> - Gray text
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Colors -->
+            <section class="mb-5">
+                <div class="cheat-section">Colors & Backgrounds</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Text Colors</h5>
+                        <div class="code-snippet">
+                            <code>.text-primary</code>
+                            <span class="text-primary">primary</span><br />
+                            <code>.text-success</code>
+                            <span class="text-success">success</span><br />
+                            <code>.text-danger</code>
+                            <span class="text-danger">danger</span><br />
+                            <code>.text-warning</code>
+                            <span class="text-warning">warning</span><br />
+                            <code>.text-info</code>
+                            <span class="text-info">info</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Background Colors</h5>
+                        <div class="code-snippet">
+                            <code>.bg-primary</code>
+                            <span class="badge bg-primary">primary</span><br />
+                            <code>.bg-success</code>
+                            <span class="badge bg-success">success</span><br />
+                            <code>.bg-danger</code>
+                            <span class="badge bg-danger">danger</span><br />
+                            <code>.bg-warning</code>
+                            <span class="badge bg-warning text-dark"
+                                >warning</span
+                            ><br />
+                            <code>.bg-info</code>
+                            <span class="badge bg-info">info</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Spacing -->
+            <section class="mb-5">
+                <div class="cheat-section">Spacing (Margin & Padding)</div>
+                <div class="code-snippet">
+                    <strong>Format:</strong> {property}{sides}-{size}<br />
+                    <strong>Property:</strong> m (margin), p (padding)<br />
+                    <strong>Sides:</strong> t, b, s, e, x, y (or none for
+                    all)<br />
+                    <strong>Sizes:</strong> 1-5 (0.25rem to 3rem), auto<br />
+                    <br />
+                    <code>.mt-3</code> - margin-top: 1rem<br />
+                    <code>.mb-5</code> - margin-bottom: 3rem<br />
+                    <code>.px-2</code> - padding-left & right: 0.5rem<br />
+                    <code>.m-auto</code> - margin: auto
+                </div>
+            </section>
+
+            <!-- Flexbox & Display -->
+            <section class="mb-5">
+                <div class="cheat-section">Flexbox & Display</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Display & Positioning</h5>
+                        <div class="code-snippet">
+                            <code>.d-flex</code> - Display flex<br />
+                            <code>.d-grid</code> - Display grid<br />
+                            <code>.d-none</code> - Display none<br />
+                            <code>.d-md-block</code> - Block on medium+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Flex Utilities</h5>
+                        <div class="code-snippet">
+                            <code>.justify-content-center</code><br />
+                            <code>.align-items-center</code><br />
+                            <code>.flex-wrap</code><br />
+                            <code>.gap-3</code> - Spacing between items
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Buttons -->
+            <section class="mb-5">
+                <div class="cheat-section">Buttons</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Button Styles</h5>
+                        <div class="code-snippet">
+                            <code>.btn .btn-primary</code><br />
+                            <code>.btn .btn-outline-primary</code><br />
+                            <code>.btn .btn-lg</code> - Large button<br />
+                            <code>.btn .btn-sm</code> - Small button
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Button States</h5>
+                        <div class="code-snippet">
+                            <code>.disabled</code> - Disabled state<br />
+                            <code>.active</code> - Active state<br />
+                            <code>.btn-group</code> - Button group<br />
+                            <code>.dropdown-toggle</code> - Dropdown button
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards -->
+            <section class="mb-5">
+                <div class="cheat-section">Cards</div>
+                <div class="code-snippet">
+                    <code>.card</code> - Card container<br />
+                    <code>.card-header</code> - Header section<br />
+                    <code>.card-body</code> - Main content<br />
+                    <code>.card-footer</code> - Footer section<br />
+                    <code>.card-title</code>, <code>.card-text</code>,
+                    <code>.card-img-top</code>
+                </div>
+            </section>
+
+            <!-- Forms -->
+            <section class="mb-5">
+                <div class="cheat-section">Forms</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Form Elements</h5>
+                        <div class="code-snippet">
+                            <code>.form-label</code> - Label styling<br />
+                            <code>.form-control</code> - Input/textarea<br />
+                            <code>.form-select</code> - Select dropdown<br />
+                            <code>.form-check</code> - Checkbox/radio
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Form Layout</h5>
+                        <div class="code-snippet">
+                            <code>.form-floating</code> - Floating labels<br />
+                            <code>.input-group</code> - Grouped inputs<br />
+                            <code>.was-validated</code> - Validation<br />
+                            <code>.is-invalid</code> - Error state
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navbar -->
+            <section class="mb-5">
+                <div class="cheat-section">Navigation Bar</div>
+                <div class="code-snippet">
+                    <code>.navbar</code> - Navigation container<br />
+                    <code>.navbar-brand</code> - Logo/brand<br />
+                    <code>.nav</code> - Navigation list<br />
+                    <code>.navbar-expand-lg</code> - Responsive collapse<br />
+                    <code>.navbar-dark</code>, <code>.navbar-light</code> -
+                    Theme<br />
+                    <code>.sticky-top</code> - Sticky navigation
+                </div>
+            </section>
+
+            <!-- Modals -->
+            <section class="mb-5">
+                <div class="cheat-section">Modals & Alerts</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Modal Structure</h5>
+                        <div class="code-snippet">
+                            <code>.modal</code> - Container<br />
+                            <code>.modal-dialog</code> - Dialog box<br />
+                            <code>.modal-content</code> - Content<br />
+                            <code>.modal-header</code> - Header<br />
+                            <code>.modal-body</code> - Body<br />
+                            <code>.modal-footer</code> - Footer
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Alerts</h5>
+                        <div class="code-snippet">
+                            <code>.alert</code> - Alert container<br />
+                            <code>.alert-primary</code> - Theme color<br />
+                            <code>.alert-dismissible</code> - Closeable<br />
+                            <code>.fade</code>, <code>.show</code> - Animation
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tables -->
+            <section class="mb-5">
+                <div class="cheat-section">Tables</div>
+                <div class="code-snippet">
+                    <code>.table</code> - Table styles<br />
+                    <code>.table-striped</code> - Alternating rows<br />
+                    <code>.table-bordered</code> - Full borders<br />
+                    <code>.table-hover</code> - Hover effects<br />
+                    <code>.table-responsive</code> - Mobile friendly<br />
+                    <code>.table-dark</code> - Dark theme
+                </div>
+            </section>
+
+            <!-- Utilities -->
+            <section class="mb-5">
+                <div class="cheat-section">Utility Classes</div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Text Alignment</h5>
+                        <div class="code-snippet">
+                            <code>.text-start</code><br />
+                            <code>.text-center</code><br />
+                            <code>.text-end</code>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Sizing</h5>
+                        <div class="code-snippet">
+                            <code>.w-25</code>, <code>.w-50</code><br />
+                            <code>.h-25</code>, <code>.h-50</code><br />
+                            <code>.w-100</code>, <code>.h-100</code>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Borders & Shadows</h5>
+                        <div class="code-snippet">
+                            <code>.border</code><br />
+                            <code>.rounded</code><br />
+                            <code>.shadow</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Breakpoints Reference -->
+            <section class="mb-5">
+                <div class="cheat-section">Responsive Breakpoints</div>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Breakpoint</th>
+                                <th>Class</th>
+                                <th>Width</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Extra small</td>
+                                <td>None</td>
+                                <td>&lt;576px</td>
+                            </tr>
+                            <tr>
+                                <td>Small</td>
+                                <td>-sm-</td>
+                                <td>≥576px</td>
+                            </tr>
+                            <tr>
+                                <td>Medium</td>
+                                <td>-md-</td>
+                                <td>≥768px</td>
+                            </tr>
+                            <tr>
+                                <td>Large</td>
+                                <td>-lg-</td>
+                                <td>≥992px</td>
+                            </tr>
+                            <tr>
+                                <td>Extra large</td>
+                                <td>-xl-</td>
+                                <td>≥1200px</td>
+                            </tr>
+                            <tr>
+                                <td>XXL</td>
+                                <td>-xxl-</td>
+                                <td>≥1400px</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Useful CDN Links -->
+            <section>
+                <div class="cheat-section">Quick CDN Links</div>
+                <div class="code-snippet">
+                    <strong>Bootstrap CSS:</strong><br />
+                    <code
+                        >&lt;link
+                        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+                        rel="stylesheet"&gt;</code
+                    >
+                    <br /><br />
+                    <strong>Bootstrap JS:</strong><br />
+                    <code
+                        >&lt;script
+                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code
+                    >
+                    <br /><br />
+                    <strong>Bootstrap Icons:</strong><br />
+                    <code
+                        >&lt;link rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"&gt;</code
+                    >
+                </div>
+            </section>
+        </div>
+
+        <!-- Bootstrap JS CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,449 @@
+/* ========================================
+   CUSTOM BOOTSTRAP STYLING
+   ======================================== */
+
+/* 1. OVERRIDE BOOTSTRAP'S DEFAULT COLORS */
+:root {
+    /* Primary Colors */
+    --bs-primary: #ff5733; /* Main color */
+    --bs-secondary: #764ba2; /* Secondary color */
+    --bs-success: #28a745; /* Success */
+    --bs-danger: #dc3545; /* Danger/Error */
+    --bs-warning: #ffc107; /* Warning */
+    --bs-info: #17a2b8; /* Info */
+    --bs-light: #f8f9fa; /* Light */
+    --bs-dark: #343a40; /* Dark */
+
+    /* Font Family */
+    --bs-body-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --bs-font-sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Other Variables */
+    --bs-body-bg: #f5f5f5;
+    --bs-border-radius: 0.5rem;
+}
+
+/* 2. GLOBAL STYLES */
+body {
+    background-color: var(--bs-body-bg);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 3. TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: #212529;
+    text-shadow: none;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+h2 {
+    font-size: 2.2rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+
+p {
+    color: #555;
+}
+
+.lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+/* 4. NAVBAR CUSTOMIZATION */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: var(--bs-primary) !important;
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: #fff !important;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* 5. BUTTON CUSTOMIZATION */
+.btn {
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: #e84e1f;
+    border-color: #e84e1f;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* 6. CARD CUSTOMIZATION */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background-color: var(--bs-primary);
+    color: white;
+    border-bottom: none;
+    font-weight: 600;
+}
+
+.card-footer {
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* 7. ALERT CUSTOMIZATION */
+.alert {
+    border-radius: 0.5rem;
+    border: none;
+    border-left: 4px solid;
+}
+
+.alert-primary {
+    background-color: #f0f4ff;
+    color: #0d47a1;
+    border-left-color: var(--bs-primary);
+}
+
+.alert-success {
+    background-color: #f0f9f0;
+    color: #1b5e20;
+    border-left-color: var(--bs-success);
+}
+
+.alert-danger {
+    background-color: #fff0f0;
+    color: #b71c1c;
+    border-left-color: var(--bs-danger);
+}
+
+.alert-warning {
+    background-color: #fffef0;
+    color: #f57f17;
+    border-left-color: var(--bs-warning);
+}
+
+/* 8. FORM CUSTOMIZATION */
+.form-control,
+.form-select {
+    border-radius: 0.375rem;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(255, 87, 51, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* 9. BADGE CUSTOMIZATION */
+.badge {
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.badge.rounded-pill {
+    border-radius: 10rem;
+}
+
+/* 10. PROGRESS BAR CUSTOMIZATION */
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 0.375rem;
+    height: 0.5rem;
+}
+
+.progress-bar {
+    background-color: var(--bs-primary);
+    border-radius: 0.375rem;
+}
+
+/* 11. TABLE CUSTOMIZATION */
+.table {
+    border-collapse: collapse;
+}
+
+.table thead th {
+    background-color: var(--bs-primary);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(242, 242, 242, 0.5);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 87, 51, 0.1);
+}
+
+/* 12. PAGINATION CUSTOMIZATION */
+.pagination .page-link {
+    color: var(--bs-primary);
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: white;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* 13. DROPDOWN CUSTOMIZATION */
+.dropdown-menu {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f5f5f5;
+    color: var(--bs-primary);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: var(--bs-primary);
+}
+
+/* 14. LIST GROUP CUSTOMIZATION */
+.list-group-item {
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.list-group-item.active {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.list-group-item:hover {
+    background-color: #f9f9f9;
+}
+
+/* 15. MODAL CUSTOMIZATION */
+.modal-header {
+    background-color: var(--bs-primary);
+    color: white;
+    border-bottom: none;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* 16. UTILITY CLASSES */
+.shadow-sm {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.border-primary {
+    border-color: var(--bs-primary) !important;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.bg-light-primary {
+    background-color: rgba(255, 87, 51, 0.1);
+}
+
+/* 17. HELPERS */
+.no-decoration {
+    text-decoration: none;
+}
+
+.no-decoration:hover {
+    text-decoration: none;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.rounded-lg {
+    border-radius: 0.75rem;
+}
+
+.rounded-xl {
+    border-radius: 1rem;
+}
+
+/* 18. SPACING HELPERS */
+.gap-xs {
+    gap: 0.5rem;
+}
+.gap-sm {
+    gap: 1rem;
+}
+.gap-md {
+    gap: 1.5rem;
+}
+.gap-lg {
+    gap: 2rem;
+}
+.gap-xl {
+    gap: 3rem;
+}
+
+/* 19. RESPONSIVE UTILITIES */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .container-xl {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+/* 20. ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-in;
+}
+
+/* ========================================
+   END OF CUSTOM BOOTSTRAP STYLING
+   ======================================== */
+
+/* 
+   ⚡ HOW TO USE THIS FILE:
+   
+   1. Link this in your HTML head:
+      <link rel="stylesheet" href="custom.css">
+      
+   2. Make sure Bootstrap CDN is loaded BEFORE this file:
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="custom.css">
+   
+   3. Edit the CSS variables in :root to change colors globally:
+      --bs-primary: #ff5733;  (change this to your color)
+      
+   4. Add your custom styles below the Bootstrap import
+   
+   ⚡ TIPS:
+   - Don't delete Bootstrap's CDN style
+   - Keep the order: Bootstrap CSS → your custom CSS
+   - Use CSS variables (--bs-primary) to change colors everywhere at once
+   - Test in browser (F12) to see changes
+*/

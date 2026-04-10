@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SASS Quick Setup Guide</title>
+        <!-- Bootstrap 5 CDN -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../css/06-SASS-quick-setup.css" />
+    </head>
+    <body class="bg-light">
+        <header class="bg-dark text-white py-4 mb-5">
+            <div class="container">
+                <h1>⚡ SASS Quick Setup (3 Minutes)</h1>
+                <p>
+                    Get started with SASS/SCSS in 3 different ways - pick what
+                    works for you!
+                </p>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Option 1 -->
+            <section class="mb-5">
+                <div class="option-header">
+                    <h2>🚀 Option 1: Easiest (CDN + Custom CSS)</h2>
+                    <span class="option-badge"
+                        >⏱️ 2 Minutes | ✅ No Installation</span
+                    >
+                </div>
+
+                <p class="lead">
+                    If you don't have Node.js installed, this is your fastest
+                    option!
+                </p>
+
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Create Your CSS File</h4>
+                        <p>
+                            Create <code>custom.css</code> in your project
+                            folder:
+                        </p>
+                        <div class="code-terminal">
+                            <pre>
+/* custom.css */
+:root {
+  --primary-color: #0066cc;
+  --secondary-color: #FF6B6B;
+  --success-color: #28a745;
+}
+
+body {
+  --bs-body-font-size: 16px;
+  color: var(--primary-color);
+}
+
+.btn-custom {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}</pre
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Link in Your HTML</h4>
+                        <div class="code-terminal">
+                            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    
+    &lt;!-- Your Custom CSS --&gt;
+    &lt;link rel="stylesheet" href="custom.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button class="btn-custom"&gt;My Custom Button&lt;/button&gt;
+    
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <strong>✅ Done!</strong> You now have Bootstrap
+                    customization without SASS compilation. Use CSS variables
+                    for colors and styles.
+                </div>
+
+                <div class="pros-cons">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-success">✓ Pros</h5>
+                            <ul>
+                                <li>No installation needed</li>
+                                <li>Works immediately</li>
+                                <li>Easy to understand</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-danger">✗ Cons</h5>
+                            <ul>
+                                <li>No variables/mixins</li>
+                                <li>More repetitive code</li>
+                                <li>No nesting support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="my-5" />
+
+            <!-- Option 2 -->
+            <section class="mb-5">
+                <div class="option-header">
+                    <h2>🎯 Option 2: SASS Compiler (Best Balance)</h2>
+                    <span class="option-badge"
+                        >⏱️ 5 Minutes | ✅ Recommended</span
+                    >
+                </div>
+
+                <p class="lead">
+                    Using Dart Sass - the official SASS compiler. Works on
+                    Windows, Mac, Linux.
+                </p>
+
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Install Node.js (if not installed)</h4>
+                        <p>
+                            Download from
+                            <a href="https://nodejs.org" target="_blank"
+                                >nodejs.org</a
+                            >
+                            (LTS version)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Install Sass</h4>
+                        <p>
+                            Open Terminal/PowerShell in your project folder and
+                            run:
+                        </p>
+                        <div class="code-terminal">
+                            <pre>npm install -g sass</pre>
+                        </div>
+                        <p class="mt-2">Verify installation:</p>
+                        <div class="code-terminal">
+                            <pre>sass --version</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Create Your SCSS File</h4>
+                        <p>Create <code>main.scss</code>:</p>
+                        <div class="code-terminal">
+                            <pre>
+// Define variables
+$primary-color: #0066cc;
+$secondary-color: #FF6B6B;
+$base-font-size: 16px;
+
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Add your styles
+body {
+  font-size: $base-font-size;
+  color: $primary-color;
+}
+
+.btn-custom {
+  background-color: $secondary-color;
+  padding: 10px 20px;
+  border-radius: 4px;
+  
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}</pre
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Compile SCSS to CSS</h4>
+                        <p>Run in Terminal:</p>
+                        <div class="code-terminal">
+                            <pre>sass main.scss main.css</pre>
+                        </div>
+                        <p class="mt-2">
+                            Or use Watch Mode (auto-compile when you save):
+                        </p>
+                        <div class="code-terminal">
+                            <pre>sass --watch . --format=compressed</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Link in HTML</h4>
+                        <div class="code-terminal">
+                            <pre>
+&lt;link rel="stylesheet" href="main.css"&gt;</pre
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success">
+                    <strong>✅ Done!</strong> You now have a professional SASS
+                    setup with full Bootstrap customization!
+                </div>
+
+                <div class="pros-cons">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-success">✓ Pros</h5>
+                            <ul>
+                                <li>Full SASS features</li>
+                                <li>Bootstrap customization</li>
+                                <li>Auto-compile watch mode</li>
+                                <li>Professional setup</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-danger">✗ Cons</h5>
+                            <ul>
+                                <li>Requires Node.js</li>
+                                <li>Command line usage</li>
+                                <li>Terminal skills needed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="my-5" />
+
+            <!-- Option 2B -->
+            <section class="mb-5">
+                <div class="option-header">
+                    <h2>
+                        💻 Option 2B: VS Code Extension (Easiest Compilation)
+                    </h2>
+                    <span class="option-badge"
+                        >⏱️ 5 Minutes | ✅ GUI-based</span
+                    >
+                </div>
+
+                <p class="lead">
+                    Use VS Code's Live Sass Compiler extension - no terminal
+                    commands!
+                </p>
+
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Install Extension</h4>
+                        <p>In VS Code:</p>
+                        <ul>
+                            <li>Go to Extensions (Ctrl+Shift+X)</li>
+                            <li>Search "Live Sass Compiler"</li>
+                            <li>Install by Glenn Marks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Create SCSS File</h4>
+                        <p>
+                            Name your file <code>main.scss</code> (extension
+                            matters!)
+                        </p>
+                        <div class="code-terminal">
+                            <pre>
+$primary: #0066cc;
+
+body {
+  background-color: $primary;
+}</pre
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Start Watching</h4>
+                        <p>Click "Watch Sass" in the bottom status bar</p>
+                        <p class="text-muted">
+                            It will automatically compile .scss files to .css
+                            whenever you save!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <strong>✅ Done!</strong> Extension will auto-compile and
+                    even open preview in browser.
+                </div>
+
+                <div class="pros-cons">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-success">✓ Pros</h5>
+                            <ul>
+                                <li>No terminal needed</li>
+                                <li>Automatic compilation</li>
+                                <li>Built-in live preview</li>
+                                <li>Very user-friendly</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-danger">✗ Cons</h5>
+                            <ul>
+                                <li>Only works in VS Code</li>
+                                <li>Extension dependency</li>
+                                <li>Bootstrap import may need npm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="my-5" />
+
+            <!-- Comparison Table -->
+            <section class="mb-5">
+                <h2 class="mb-4">Quick Comparison</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Feature</th>
+                                <th>Option 1: CDN+CSS</th>
+                                <th>Option 2: SASS CLI</th>
+                                <th>Option 2B: VS Code</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Setup Time</td>
+                                <td>2 min</td>
+                                <td>5 min</td>
+                                <td>5 min</td>
+                            </tr>
+                            <tr>
+                                <td>Installation Required</td>
+                                <td>❌ None</td>
+                                <td>✅ Node.js + npm</td>
+                                <td>✅ VS Code Ext</td>
+                            </tr>
+                            <tr>
+                                <td>SASS Features</td>
+                                <td>❌ No</td>
+                                <td>✅ Full</td>
+                                <td>✅ Full</td>
+                            </tr>
+                            <tr>
+                                <td>Bootstrap Customization</td>
+                                <td>⚠️ Limited (CSS vars)</td>
+                                <td>✅ Full</td>
+                                <td>✅ Full*</td>
+                            </tr>
+                            <tr>
+                                <td>Auto-compile</td>
+                                <td>❌ No</td>
+                                <td>✅ Watch mode</td>
+                                <td>✅ Automatic</td>
+                            </tr>
+                            <tr>
+                                <td>Best For</td>
+                                <td>Quick Learning</td>
+                                <td>Professional</td>
+                                <td>VS Code Users</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-muted">* Requires Bootstrap npm package</p>
+            </section>
+
+            <!-- File Structure -->
+            <section class="mb-5">
+                <h2 class="mb-4">Project File Structure</h2>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Option 1 - Simple Structure</h5>
+                        <div class="file-tree">
+                            <pre>
+project/
+├── index.html
+├── custom.css
+└── images/</pre
+                            >
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h5>Option 2 - Professional Structure</h5>
+                        <div class="file-tree">
+                            <pre>
+project/
+├── html/
+│   └── index.html
+├── scss/
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   └── main.scss
+├── css/
+│   └── main.css
+└── node_modules/</pre
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Common Commands -->
+            <section class="mb-5">
+                <h2 class="mb-4">Common SASS Commands</h2>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Basic Commands</h5>
+                        <div class="code-terminal">
+                            <pre>
+// Single compile
+sass input.scss output.css
+
+// Watch folder
+sass --watch .
+
+// Compressed output
+sass --watch . --style=compressed
+
+// Check version
+sass --version</pre
+                            >
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h5>NPM Scripts Setup</h5>
+                        <p>Add to <code>package.json</code> "scripts":</p>
+                        <div class="code-terminal">
+                            <pre>
+"sass": "sass",
+"sass:watch": "sass --watch .",
+"sass:build": "sass . --style=compressed"</pre
+                            >
+                        </div>
+                        <p class="mt-2">Then run:</p>
+                        <div class="code-terminal">
+                            <pre>npm run sass:watch</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Troubleshooting -->
+            <section class="mb-5">
+                <h2 class="mb-4">Troubleshooting</h2>
+
+                <div class="alert alert-warning mb-3">
+                    <strong>❌ "sass command not found"</strong><br />
+                    Run: <code>npm install -g sass</code> and restart your
+                    terminal.
+                </div>
+
+                <div class="alert alert-warning mb-3">
+                    <strong>❌ Bootstrap import not working</strong><br />
+                    Make sure Bootstrap is installed:
+                    <code>npm install bootstrap</code>
+                </div>
+
+                <div class="alert alert-warning mb-3">
+                    <strong>❌ CSS file not updating</strong><br />
+                    Make sure watch mode is running: check for "Watch Sass"
+                    button or run <code>sass --watch .</code>
+                </div>
+
+                <div class="alert alert-warning">
+                    <strong>❌ VS Code Extension not compiling</strong><br />
+                    Try: Disable and re-enable the extension, or save the .scss
+                    file again.
+                </div>
+            </section>
+
+            <!-- Next Steps -->
+            <section class="mb-5">
+                <h2 class="mb-4">Next Steps</h2>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>1. Learn SASS Syntax</h5>
+                        <p>
+                            Open <code>05-SASS-guide.html</code> for complete
+                            SASS documentation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>2. Customize Bootstrap</h5>
+                        <p>
+                            Override Bootstrap variables BEFORE importing
+                            Bootstrap in your main.scss file.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>3. Organize Your Code</h5>
+                        <p>
+                            Split SCSS into files: _variables.scss,
+                            _mixins.scss, components/, layouts/, etc.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5>4. Use Best Practices</h5>
+                        <p>
+                            Keep nesting shallow, use mixins for reusable
+                            patterns, and maintain consistent naming.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommendation -->
+            <section class="mb-5">
+                <div class="alert alert-success alert-lg">
+                    <h4>🎯 Recommendation for You</h4>
+                    <p>
+                        Since your boss asked you to use SASS, start with
+                        <strong>Option 2: SASS Compiler</strong>. It's the
+                        standard professional approach and gives you full
+                        control over Bootstrap customization.
+                    </p>
+                    <p class="mb-0">
+                        If you prefer not to use terminal, use
+                        <strong>Option 2B: VS Code Extension</strong> - it's
+                        equally powerful and more visual.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Bootstrap JS CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
